@@ -1,0 +1,21 @@
+.poster-icon.no-collection-link {
+  margin-inline-start: 0.35em;
+
+  a {
+    align-items: center;
+    color: var(--primary);
+    display: inline-flex;
+    gap: 0.25em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--tertiary);
+      text-decoration: underline;
+    }
+
+    .d-icon {
+      font-size: 0.9em;
+    }
+  }
+}
