@@ -1,21 +1,63 @@
-.poster-icon.no-collection-link {
+.names > .no-collection-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: center;
   margin-inline-start: 0.35em;
+  overflow: visible;
+  font-size: var(--font-down-1);
+  font-weight: normal;
+  line-height: var(--line-height-medium);
 
   a {
     align-items: center;
-    color: var(--primary);
+    color: var(--primary-high-or-secondary-low);
     display: inline-flex;
-    gap: 0.25em;
+    gap: 0.35em;
+    padding-block: 0.15em;
+    white-space: nowrap;
     text-decoration: none;
 
-    &:hover,
-    &:focus-visible {
+    &:hover {
       color: var(--tertiary);
-      text-decoration: underline;
+
+      .no-collection-link__label {
+        text-decoration: underline;
+      }
     }
 
-    .d-icon {
-      font-size: 0.9em;
+    &:focus-visible {
+      color: var(--tertiary);
+      outline: 2px solid var(--tertiary);
+      outline-offset: -1px;
+      border-radius: 2px;
     }
   }
+
+  .no-collection-link__icon {
+    flex: none;
+    width: 1.1em;
+    height: 1.1em;
+  }
+
+  .no-collection-link__label {
+    margin: 0;
+  }
+
+  .no-collection-link__count {
+    margin: 0;
+    padding: 0.05em 0.45em;
+    border-radius: 999px;
+    background: var(--primary-low);
+    color: var(--primary-high);
+    font-size: var(--font-down-1);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.35;
+  }
+}
+
+.mobile-view .names > .no-collection-link {
+  // Keep the link after the user title when Discourse reorders mobile metadata.
+  order: 6;
+  max-width: 100%;
+  margin-inline-start: 0;
 }

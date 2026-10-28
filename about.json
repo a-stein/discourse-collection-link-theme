@@ -4,6 +4,6 @@
   "about_url": "https://nintendo-online.de",
   "license_url": "https://opensource.org/license/mit",
   "authors": "Nintendo-Online",
-  "theme_version": "1.0.0",
+  "theme_version": "1.1.0",
   "minimum_discourse_version": "2026.7.0"
 }

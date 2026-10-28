@@ -2,3 +2,7 @@ collection_url_template:
   default: https://nintendo-online.de/u/id/{no_user_id}/collection
   type: string
   description: Full HTTPS URL for public collections. Keep the {no_user_id} placeholder.
+collection_count_url_template:
+  default: https://nintendo-online.de/api/public-collections/{no_user_id}/count
+  type: string
+  description: HTTPS endpoint confirming a public collection and returning its count. Keep {no_user_id}. An empty or unavailable endpoint hides the link.
