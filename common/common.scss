@@ -244,16 +244,38 @@
   }
 }
 
+.mobile-view .names:has(> .no-collection-link) {
+  flex-wrap: wrap;
+}
+
 .mobile-view .names > .no-collection-link {
   // Keep the link after the user title when Discourse reorders mobile metadata.
   order: 6;
-  flex-wrap: wrap;
-  max-width: 100%;
+  flex-basis: 100%;
   margin-inline-start: 0;
+  margin-block-start: 0.15em;
+}
 
-  .no-collection-link__playing {
-    flex: 1 1 100%;
-    max-width: 100%;
+@media (max-width: 767px) {
+  .names:has(> .no-collection-link) {
+    flex-wrap: wrap;
+  }
+
+  .names > .no-collection-link {
+    flex-basis: 100%;
     margin-inline-start: 0;
+    margin-block-start: 0.15em;
+  }
+}
+
+@media (max-width: 479px) {
+  .names > .no-collection-link {
+    flex-wrap: wrap;
+
+    .no-collection-link__playing {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-inline-start: 0;
+    }
   }
 }
