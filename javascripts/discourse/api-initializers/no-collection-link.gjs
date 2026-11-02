@@ -145,7 +145,6 @@ class CollectionLink extends Component {
                   @identifier="no-collection-link-playing"
                   @placement="bottom-end"
                   @autofocus={{true}}
-                  @label={{collection.moreGamesLabel}}
                   @ariaLabel={{collection.moreGamesLabel}}
                   @triggerClass="no-collection-link__more-trigger"
                   @contentClass="no-collection-link__popover-shell"
