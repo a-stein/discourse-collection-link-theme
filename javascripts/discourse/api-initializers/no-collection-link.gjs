@@ -130,7 +130,7 @@ class CollectionLink extends Component {
                 aria-hidden="true"
                 focusable="false"
               ><circle cx="12" cy="12" r="10" /><path d="m10 8 6 4-6 4z" /></svg>
-              <span class="no-collection-link__playing-label">Spielt gerade:</span>
+              <span class="sr-only">Spielt gerade:</span>
               <a
                 class="no-collection-link__playing-title"
                 href={{collection.firstPlaying.url}}
